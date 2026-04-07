@@ -1,26 +1,31 @@
-<p>
-    <a href="https://www.urionlinejudge.com.br"><img align="center" style="margin: 0px auto;" src="https://github.com/Gui25Reis/Uri/blob/master/_outros/logo.png"/></a>
-</p>
-<p align="center">
-    Meu <a href="https://www.urionlinejudge.com.br/judge/pt/profile/318386">perfil</a> - TOP 10 do <a href="https://www.urionlinejudge.com.br/judge/pt/users/university/upm">Mackenzie</a>
-</p>
-<p align="justify"style="text-indent: 40px">
-    <a href="https://www.urionlinejudge.com.br">Uri</a> é um site com vários problemas simples e complexos para treinar a lógica. Nele dá pra testar as soluções e saber na hora se conseguiu de fato resolver o exercício ou não. <br/>
-</p>
-<p align="justify"style="text-indent: 40px">
-    Pra mim ajudou bastante, principlmente no começo com os conceitos básicos! Recomendo para iniciantes e também pra quem quer aprender uma nova linguagem, já que puxa alguns conceitos básicos, apendendo sobre as sintaxe dela.
+# Exercícios de Programação
+
+Repositório com minhas soluções de exercícios de plataformas de programação, organizadas por site e linguagem.
+
+## Sobre
+
+<p align="justify">
+    Resolvo esses exercícios principalmente para aprender novas linguagens. Saber o conceito não basta — trabalhar com arrays em Swift é diferente de trabalhar em C++, e é nesse detalhe prático que os exercícios ajudam muito. Cada linguagem tem suas peculiaridades, e resolver o mesmo tipo de problema em contextos diferentes acelera bastante o aprendizado.
 </p>
 
-# Meus exercícios
-Estou disponibilizando meus exercícios comentados e identados. Conforme for fazendo vou adicionando os novos.
+<p align="justify">
+    O URI foi o primeiro site que tive contato, logo no início da faculdade. Com o tempo, passei a usar também o LeetCode e o HackerRank, motivado principalmente por preparação para entrevistas técnicas de big techs. Cada plataforma tem seu estilo e foco diferente, mas todas contribuem da mesma forma: prática.
+</p>
 
-## ⚠️ ATENÇÂO ⚠️
+<p align="justify">
+    Quando dei aulas, usava o URI como base para passar exercícios aos alunos — é uma plataforma ótima para quem está começando. Isso explica por que você vai encontrar bastante comentário explicando o que está acontecendo linha a linha. No início, anotar o raciocínio ajudava a consolidar o entendimento, e mantive esse hábito.
+</p>
 
-Eu não tenho problema em você se basear nos exercícios, peço a única gentileza de em caso de cópia, modificar algumas coisas! O Uri tem [restrições](https://www.urionlinejudge.com.br/judge/pt/terms-and-conditions) próprias em relação a isso:
+<p align="justify">
+    Além das minhas próprias soluções, você pode encontrar aqui soluções alternativas — muitas vezes sugeridas por IA — para comparar abordagens, ver formas mais eficientes de resolver o mesmo problema e entender onde há espaço para melhoria.
+</p>
 
+## Sites
 
->   Usuários podem compartilhar suas soluções (códigos-fonte) em repositórios públicos (como GitHub, BitBucket ou semelhantes) e sites pessoais de acordo com sua vontade. Todavia, fica proibido o uso destes por parte de terceiros no URI Online Judge. Os usuários que porventura façam uso desta prática podem ter suas contas desativadas sem aviso prévio.
-
+| Site | Linguagens | Contexto |
+|---|---|---|
+| [URI / Beecrowd](Exercises/URI/) | ![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white) ![Swift](https://img.shields.io/badge/Swift-FA7343?style=flat-square&logo=swift&logoColor=white) | Primeiro contato, usado também em aulas |
+| [LeetCode](Exercises/Leetcode/) | ![Swift](https://img.shields.io/badge/Swift-FA7343?style=flat-square&logo=swift&logoColor=white) | Preparação para entrevistas técnicas |
 
 ## Autor
 <table>
