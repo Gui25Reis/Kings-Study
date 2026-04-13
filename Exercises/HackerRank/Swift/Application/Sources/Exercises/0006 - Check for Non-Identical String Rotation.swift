@@ -68,15 +68,15 @@ fileprivate func isNonTrivialRotation(s1: String, s2: String) -> Bool {
 }
 
 
-/* KMP (Knuth-Morris-Pratt)
- 
- Dps que a IA comentou sobre esse algoritmo, peguei a ideia e re-apliquei.
- */
-
 /*
  ============
  SUBMITION 02
  ============
+ */
+
+/* KMP (Knuth-Morris-Pratt)
+ 
+ Dps que a IA comentou sobre esse algoritmo, peguei a ideia e re-apliquei.
  */
 fileprivate func submition2(s1: String, s2: String) -> Bool {
     guard s1.count > 1, s2.count > 1, s1.count == s2.count, s1 != s2
@@ -160,4 +160,14 @@ fileprivate func submition1(s1: String, s2: String) -> Bool {
     }
     
     return false
+}
+
+
+/*
+ ============
+ Swift Native
+ ============
+ */
+fileprivate func aiSuggestion(s1: String, s2: String) -> Bool {
+    (s1 + s1).contains(s2)
 }
