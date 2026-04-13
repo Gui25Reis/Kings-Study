@@ -84,6 +84,8 @@ struct Ex0004 {
 
 // MARK: - Solutions
 fileprivate func findSmallestMissingPositive(orderNumbers array: [Int]) -> Int {
+    return submition1(orderNumbers: array)
+    
     guard !array.isEmpty else { return 1 }
     
     if array.count == 1 {
