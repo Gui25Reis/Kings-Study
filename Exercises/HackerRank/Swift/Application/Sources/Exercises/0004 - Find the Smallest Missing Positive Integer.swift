@@ -82,6 +82,133 @@ struct Ex0004 {
     }
 }
 
-fileprivate func findSmallestMissingPositive(orderNumbers: [Int]) -> Int {
-    0
+// MARK: - Solutions
+fileprivate func findSmallestMissingPositive(orderNumbers array: [Int]) -> Int {
+    guard !array.isEmpty else { return 1 }
+    
+    if array.count == 1 {
+        return array.first == 1 ? 2 : 1
+    }
+    
+    var array = array
+    var ind = 0
+    
+    for _ in 0..<array.count {
+        let num = array[ind]
+        guard num > 0 else {
+            ind += 1
+            continue
+        }
+        
+        let correctIndex = num - 1
+        
+        guard correctIndex != ind, correctIndex < array.count else {
+            ind += 1
+            continue
+        }
+        
+        let otherNum = array[correctIndex]
+        
+        array[correctIndex] = num
+        array[ind] = otherNum
+    }
+    
+    var minPositive = 1
+    for ind in 0..<array.count {
+        let num = array[ind]
+        
+        if num < minPositive {
+            continue
+        }
+        
+        if num == minPositive { // Casos repetidos
+            minPositive += 1
+            continue
+        }
+    }
+    
+    return minPositive
+}
+
+
+// MARK: AI solution
+
+/*
+ Cyclic Sort — O(n) tempo, O(1) espaço
+
+ Fase 1 — colocar cada número na posição correta (num → índice num-1):
+   Enquanto array[ind] está fora do lugar, troca com a posição correta.
+   Só avança ind quando o elemento atual já está no lugar (ou é inválido).
+   Dessa forma, cada elemento é movido no máximo uma vez → O(n) no total.
+
+ Fase 2 — varrer o array já organizado:
+   O primeiro índice onde array[ind] != ind+1 revela o menor positivo faltando.
+   Se todos estiverem corretos, o faltante é n+1.
+
+ A diferença para a solução anterior:
+   - Usa while em vez de for na fase 1 → garante que ind só avança quando o slot está resolvido
+   - A fase 2 compara diretamente array[ind] com ind+1, sem depender de ordenação completa
+ */
+fileprivate func aiSolution(orderNumbers: [Int]) -> Int {
+    guard !orderNumbers.isEmpty else { return 1 }
+
+    var array = orderNumbers
+
+    // Fase 1: cyclic sort
+    var ind = 0
+    while ind < array.count {
+        let num = array[ind]
+        let correctIndex = num - 1
+
+        if num > 0, correctIndex < array.count, array[correctIndex] != num {
+            array.swapAt(ind, correctIndex)
+        } else {
+            ind += 1
+        }
+    }
+
+    // Fase 2: encontrar o primeiro buraco
+    for ind in 0..<array.count {
+        if array[ind] != ind + 1 {
+            return ind + 1
+        }
+    }
+
+    return array.count + 1
+}
+
+// MARK: First submission
+/*
+ Uma vez passado nos testes, ao confirmar com a IA a soluçào está errada por usar o dicionário
+ */
+fileprivate func submition1(orderNumbers array: [Int]) -> Int {
+    guard !array.isEmpty else { return 1 }
+    
+    var min = 0
+    
+    var cache = [Int: Bool]()
+    
+    for num in array {
+        guard num > 0 else { continue }
+        
+        defer { cache[num] = true }
+        
+        if min == 0 {
+            min = num
+        }
+        
+        if num < min {
+            min = num
+        }
+    }
+    
+    if min != 1 {
+        return 1
+    }
+    
+    repeat {
+        min += 1
+    } while cache[min] != nil
+    
+    return min
 }

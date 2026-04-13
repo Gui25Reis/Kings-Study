@@ -121,4 +121,24 @@ final class HR0004Tests: XCTestCase {
         // Action
         validate(expected: expected)
     }
+
+    func test_10() {
+        // Prepare - todos os elementos 1..n presentes, em pares invertidos
+        // orderNumbers=[2,1,4,3,6,5]
+        let expected = "7"
+        inputs = ["6", "2", "1", "4", "3", "6", "5"]
+
+        // Action
+        validate(expected: expected)
+    }
+
+    func test_11() {
+        // Prepare - todos os elementos 1..n presentes, ordem invertida com swap no final
+        // orderNumbers=[4,3,2,1,6,5]
+        let expected = "7"
+        inputs = ["6", "4", "3", "2", "1", "6", "5"]
+
+        // Action
+        validate(expected: expected)
+    }
 }
