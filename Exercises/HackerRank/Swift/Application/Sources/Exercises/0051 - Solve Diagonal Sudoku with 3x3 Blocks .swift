@@ -128,6 +128,7 @@ struct Ex0051 {
     }
 }
 
+// MARK: - Solution
 fileprivate typealias Cell = (row: Int, col: Int)
 
 fileprivate struct Mapper {
@@ -284,29 +285,90 @@ fileprivate func validateCell(for cell: Cell, mapper: inout Mapper) -> Int {
 
 fileprivate func completeDiagonalSudokuGrid(grid: [[Int]]) -> [[Int]] {
     var mapper = map(grid: grid)
-    
+
     // No zero received
     if mapper.empty.isEmpty {
         return grid
     }
-    
+
     var grid = grid
-    
+
     while !mapper.empty.isEmpty {
         let cell = mapper.empty[0]
-        
+
         let missingCell = validateCell(for: cell, mapper: &mapper)
-        
+
         if missingCell == -1 {
             // Not possible to check, putting in the end
             let first = mapper.empty.removeFirst()
             mapper.empty.append(first)
             continue
         }
-        
+
         grid[cell.row][cell.col] = missingCell
         mapper.empty.removeFirst()
     }
 
+    return grid
+}
+
+
+// MARK: - AI Solution
+fileprivate func aiSolution(grid: [[Int]]) -> [[Int]] {
+    var grid = grid
+
+    func isValid(_ num: Int, row: Int, col: Int) -> Bool {
+        // Row
+        if grid[row].contains(num) { return false }
+
+        // Col
+        if grid.map({ $0[col] }).contains(num) { return false }
+
+        // Quad
+        let startRow = (row / 3) * 3
+        let startCol = (col / 3) * 3
+        for r in startRow..<startRow+3 {
+            for c in startCol..<startCol+3 {
+                if grid[r][c] == num { return false }
+            }
+        }
+
+        // Principal diagonal
+        if row == col {
+            for i in 0..<9 {
+                if grid[i][i] == num { return false }
+            }
+        }
+
+        // Secondary diagonal
+        if row + col == 8 {
+            for i in 0..<9 {
+                if grid[i][8-i] == num { return false }
+            }
+        }
+
+        return true
+    }
+
+    func solve() -> Bool {
+        for row in 0..<9 {
+            for col in 0..<9 {
+                guard grid[row][col] == 0 else { continue }
+
+                for num in 1...9 {
+                    if isValid(num, row: row, col: col) {
+                        grid[row][col] = num
+                        if solve() { return true }
+                        grid[row][col] = 0 // backtrack
+                    }
+                }
+
+                return false // nenhum numero funcionou, volta
+            }
+        }
+        return true // sem zeros restantes
+    }
+
+    solve()
     return grid
 }
