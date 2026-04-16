@@ -165,7 +165,7 @@ O `MockInputProvider` recebe `inputs: [String]` e devolve um elemento por chamad
 
 - O boilerplate gerado pelo HackerRank usa `1...n` no loop de leitura — isso causa crash quando n=0
 - O usuário envia apenas a função `fileprivate` para o HackerRank, não a `struct`
-- Timeout nos testes do HackerRank indica que a solução excede o limite de tempo — geralmente significa que a complexidade precisa ser reduzida
+- Timeout nos testes do HackerRank pode indicar complexidade alta, mas também pode ser falso positivo: o runtime de Swift no HackerRank é notoriamente lento e soluções O(n+e) eficientes podem dar timeout mesmo estando corretas. Antes de otimizar, verificar se o problema não é wrong answer sendo reportado como timeout
 - O primeiro caso de teste que falha costuma ser o edge case de array vazio (n=0)
 - O boilerplate do HackerRank é travado e não pode ser editado — o crash do `1...n` não tem como ser contornado pelo usuário
 - **Non-ASCII**: Swift no HackerRank não aceita caracteres não-ASCII. Comentários em português com acentos (`é`, `ã`, `ç`, etc.) causam erro de compilação. Ao submeter, o usuário deve remover todos os comentários com acentos
@@ -180,6 +180,8 @@ O `Input Format` varia por exercício — sempre ler o comentário do arquivo co
 - **String única**: uma linha só com a string (ex: 0005)
 - **Duas strings**: uma por linha (ex: 0006)
 - **Parâmetros extras após o array**: k, M, target etc. vêm depois dos elementos (ex: 0003, 0007)
+- **Grafo (links)**: linha com m (qtd de links) + linha com tamanho de cada link (geralmente 2, descartar) + m linhas com "a b" separados por espaço + linha com n (qtd de nós) (ex: 0022)
+- **Árvore BST com arrays**: linha com n + n linhas com values + linha com m + m linhas com leftChild + linha com p + p linhas com rightChild, todos elementos um por linha (ex: 0023)
 
 ---
 
