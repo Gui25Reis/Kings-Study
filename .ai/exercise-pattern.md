@@ -27,7 +27,7 @@ This protocol abstracts all I/O so that the same exercise function can run in pr
 
 ```swift
 protocol InputProvider: AnyObject {
-    var shouldConsidereNextLineForEachPrint: Bool { get set }
+    var shouldConsiderNextLineForEachPrint: Bool { get set }
     func readLine() -> String?
     func print(_ data: String)
 }
@@ -43,8 +43,8 @@ Used in tests. Receives a `[String]` array of inputs at init time. Reads them se
 
 **Critical behavior of `dataPrinted`:**
 
-- By default (`shouldConsidereNextLineForEachPrint = false`): only the **last** call to `print()` is stored. Each call **overwrites** `dataPrinted`.
-- When `shouldConsidereNextLineForEachPrint = true`: each `print()` call **appends** to `dataPrinted` with a `\n` separator.
+- By default (`shouldConsiderNextLineForEachPrint = false`): only the **last** call to `print()` is stored. Each call **overwrites** `dataPrinted`.
+- When `shouldConsiderNextLineForEachPrint = true`: each `print()` call **appends** to `dataPrinted` with a `\n` separator.
 
 This flag must be set **before** calling the exercise function in tests that expect multi-line output.
 
@@ -56,7 +56,7 @@ ex1001(input: provider)
 
 // Multi-line output exercise
 let provider = MockInputProvider(inputs: [...])
-provider.shouldConsidereNextLineForEachPrint = true
+provider.shouldConsiderNextLineForEachPrint = true
 ex1021(input: provider)
 // provider.dataPrinted == "line1\nline2\nline3"
 ```
@@ -191,7 +191,7 @@ When the exercise prints multiple lines, set the flag before calling the exercis
 ```swift
 private func validate(expected: String) {
     let provider = MockInputProvider(inputs: inputs)
-    provider.shouldConsidereNextLineForEachPrint = true  // ← add this line
+    provider.shouldConsiderNextLineForEachPrint = true  // ← add this line
     exNNNN(input: provider)
     XCTAssertEqual(expected, provider.dataPrinted)
 }

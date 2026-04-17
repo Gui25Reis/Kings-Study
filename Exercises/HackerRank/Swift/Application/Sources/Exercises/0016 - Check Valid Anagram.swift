@@ -83,7 +83,7 @@ struct Ex0016 {
 /*
  Time: O(n) | Memory: O(n)
  
- PS: because the alphabet has 26 letters, in tepry the memory would be O(1).
+ PS: because the alphabet has 26 letters, in theory the memory would be O(1).
  */
 fileprivate func isAnagram(s: String, t: String) -> Int {
     guard s.count == t.count else { return 0 }
@@ -96,7 +96,7 @@ fileprivate func isAnagram(s: String, t: String) -> Int {
         map[char] = (count ?? 0) + 1
     }
     
-    // Interate
+    // Iterate
     for char in t {
         guard var letterCount = map[char] else { return 0 }
         

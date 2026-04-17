@@ -84,7 +84,7 @@ struct Ex0002 {
 
 // MARK: - Solutions
 fileprivate func findSmallestMissingPositive(orderNumbers array: [Int]) -> Int {
-    return submition1(orderNumbers: array)
+    return submission1(orderNumbers: array)
     
     guard !array.isEmpty else { return 1 }
     
@@ -181,9 +181,9 @@ fileprivate func aiSolution(orderNumbers: [Int]) -> Int {
 
 // MARK: First submission
 /*
- Uma vez passado nos testes, ao confirmar com a IA a soluçào está errada por usar o dicionário
+ Uma vez passado nos testes, ao confirmar com a IA a solução está errada por usar o dicionário
  */
-fileprivate func submition1(orderNumbers array: [Int]) -> Int {
+fileprivate func submission1(orderNumbers array: [Int]) -> Int {
     guard !array.isEmpty else { return 1 }
     
     var min = 0

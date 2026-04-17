@@ -25,14 +25,14 @@ func ex1009(input: InputProvider = DefaultInputProvider()) {
     let _ = input.readLine()! // Nome
 
     let userInput02 = input.readLine()!
-    let salay = Double(userInput02)!
-    
+    let salary = Double(userInput02)!
+
     let userInput03 = input.readLine()!
     let totalSales = Double(userInput03)!
-    
-    let commision: Double = 0.15
-    
-    let result = salay + (totalSales * commision)
+
+    let commission: Double = 0.15
+
+    let result = salary + (totalSales * commission)
     let resultFormatted = String(format: "%.2f", result)
     
     let response = "TOTAL = R$ \(resultFormatted)"

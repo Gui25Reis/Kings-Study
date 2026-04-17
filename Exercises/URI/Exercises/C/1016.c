@@ -1,4 +1,4 @@
-#include <stdio.h>                              // Bilbioteca padrão de entrada e saída
+#include <stdio.h>                              // Biblioteca padrão de entrada e saída
 // #include <stdlib.h>
  
 int main() {                                    // Função main():

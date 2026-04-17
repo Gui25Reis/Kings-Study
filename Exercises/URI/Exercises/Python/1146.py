@@ -2,7 +2,7 @@ ent = int(input())                  # Pede a entrada
 while ent != 0:                     # Enquanto n for 0
     for x in range(1,ent+1):        # Cria o loop
         if x != ent:                # Se n for o último número
-            print(x, end = ' ')     # MOstra com os espaços
+            print(x, end = ' ')     # Mostra com os espaços
         else:                       # Se for    
             print(x)                # Mostra só o núemro
     ent = int(input())              # Pede a entrada

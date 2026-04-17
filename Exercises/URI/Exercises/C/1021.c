@@ -1,4 +1,4 @@
-#include <stdio.h>                              // Bilbioteca padrão de entrada e saída
+#include <stdio.h>                              // Biblioteca padrão de entrada e saída
 #include <math.h>                               // Biblioteca para matemática
 // #include <stdlib.h>
 
@@ -19,11 +19,11 @@ void moedas(float valor) {                                                  // F
     int moedas[6] = {100, 50, 25, 10, 5, 1};                                    // Valores para a divisão
     const char *txt[6] = {"1.00", "0.50", "0.25", "0.10", "0.05", "0.01"};      // Strings para o print
 
-    v = (int)round(valor*100.0);                                                //  Pega o valor e tranfroma no inteiro equivalente
+    v = (int)round(valor*100.0);                                                //  Pega o valor e transforma no inteiro equivalente
 
     printf("MOEDAS:\n");
     for  (i = 0; i < 6; i++) {
-        printf("%d moeda(s) de R$ %s\n", v/moedas[i], txt[i]);                  // Mostras as moedas
+        printf("%d moeda(s) de R$ %s\n", v/moedas[i], txt[i]);                  // Mostra as moedas
         v %= moedas[i];                                                         // Pega o restante para o próximo cálculo
     }
 }

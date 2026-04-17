@@ -8,7 +8,7 @@
 import UIKit
 
 
-fileprivate enum MovimentType {
+fileprivate enum MovementType {
     case up
     case down
 }
@@ -18,7 +18,7 @@ class KeyboardHandler: NSObject {
     
     /* Views */
     
-    /// TextField que vai ser usado como referênca e gatilho.
+    /// TextField que vai ser usado como referência e gatilho.
     var textField: UITextField
     
     /// View principal que ao tocar vai fazer a remoção do teclado!
@@ -51,7 +51,7 @@ class KeyboardHandler: NSObject {
     // UI
     
     /// Tempo de animação do movimento que a view vai fazer
-    var movimentAnimationTime: TimeInterval = 0.25
+    var movementAnimationTime: TimeInterval = 0.25
     
     /// Espaço entre a `keyboardView` e o teclado
     var spaceBetweenKeyboard: CGFloat = 40
@@ -131,9 +131,9 @@ class KeyboardHandler: NSObject {
     
     /* Animação */
     
-    private func animateViewMoving(to type: MovimentType) {
+    private func animateViewMoving(to type: MovementType) {
         UIView.animate(
-            withDuration: movimentAnimationTime,
+            withDuration: movementAnimationTime,
             animations: {
                 guard let view = self.keyboardView else { return }
                 
@@ -143,7 +143,7 @@ class KeyboardHandler: NSObject {
         )
     }
     
-    private func getMovementValue(for type: MovimentType) -> CGFloat {
+    private func getMovementValue(for type: MovementType) -> CGFloat {
         switch type {
         case .up:
             calculatePointsNeededToMove()

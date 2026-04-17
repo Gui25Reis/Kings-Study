@@ -4,7 +4,7 @@
 
 
 protocol InputProvider: AnyObject {
-    var shouldConsidereNextLineForEachPrint: Bool { get set }
+    var shouldConsiderNextLineForEachPrint: Bool { get set }
     
     func readLine() -> String?
     func print(_ data: String)
@@ -12,8 +12,8 @@ protocol InputProvider: AnyObject {
 
 
 class DefaultInputProvider: InputProvider {
-    var shouldConsidereNextLineForEachPrint = false
-    
+    var shouldConsiderNextLineForEachPrint = false
+
     func readLine() -> String? {
         return Swift.readLine()
     }
@@ -26,8 +26,8 @@ class DefaultInputProvider: InputProvider {
 
 class MockInputProvider: InputProvider {
     
-    var shouldConsidereNextLineForEachPrint = false
-    
+    var shouldConsiderNextLineForEachPrint = false
+
     private let inputs: [String]
     private var index = 0
     
@@ -44,7 +44,7 @@ class MockInputProvider: InputProvider {
     }
     
     func print(_ data: String) {
-        guard shouldConsidereNextLineForEachPrint else {
+        guard shouldConsiderNextLineForEachPrint else {
             dataPrinted = data
             return
         }

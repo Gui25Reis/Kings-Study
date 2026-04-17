@@ -1,4 +1,4 @@
-#include <stdio.h>                              // Bilbioteca padrão de entrada e saída
+#include <stdio.h>                              // Biblioteca padrão de entrada e saída
 // #include <stdlib.h>
 
 int formula (int x, int y){                     // Função para a fórmula:
@@ -8,7 +8,7 @@ int formula (int x, int y){                     // Função para a fórmula:
 int main() {                                    // Função main():
     int a, b, c, tot;                               // Declara as variáveis
 
-    scanf("%d %d %d", &a, &b, &c);                  // Pede as entradas ao usuários
+    scanf("%d %d %d", &a, &b, &c);                  // Pede as entradas ao usuário
 
     tot = formula(a, b);                            // Chama a fórmula pra dois números
 

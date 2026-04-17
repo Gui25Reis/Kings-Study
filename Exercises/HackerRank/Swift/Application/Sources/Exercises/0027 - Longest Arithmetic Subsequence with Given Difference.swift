@@ -100,25 +100,25 @@ fileprivate func findLongestArithmeticProgression(arr: [Int], k: Int) -> Int {
     let sorted = unique.sorted()
     
     var ap = [Int:Int]()
-    var maxLenght = 1
+    var maxLength = 1
     
     for num in sorted {
         let expected = num+k
         
-        guard let ongoingLenght = ap[num] else {
+        guard let ongoingLength = ap[num] else {
             ap[expected] = 1
             continue
         }
         
         ap[num] = nil
         
-        let lenght = ongoingLenght+1
-        ap[expected] = lenght
+        let length = ongoingLength+1
+        ap[expected] = length
         
-        maxLenght = (lenght > maxLenght) ? lenght : maxLenght
+        maxLength = (length > maxLength) ? length : maxLength
     }
     
-    return maxLenght
+    return maxLength
 }
 
 

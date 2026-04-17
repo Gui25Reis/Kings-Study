@@ -3,10 +3,10 @@
 using namespace std;
 
 int main() {                                            // Função MAIN:
-    int valor, notas[7] = {100, 50, 20, 10, 5, 2, 1};       // Decalra as variáveis
+    int valor, notas[7] = {100, 50, 20, 10, 5, 2, 1};       // Declara as variáveis
 
     cin >> valor;                                           // Pede o valor para o cálculo
-    cout << valor << endl;                                  // MOstra ele
+    cout << valor << endl;                                  // Mostra ele
 
     for (int i = 0; i < 7; i++) {
         cout << valor/notas[i] << " nota(s) de R$ " << notas[i] << ",00" << endl;   // Mostra a quantidade

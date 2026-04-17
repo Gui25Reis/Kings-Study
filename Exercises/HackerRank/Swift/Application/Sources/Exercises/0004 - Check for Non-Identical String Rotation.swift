@@ -64,7 +64,7 @@ fileprivate extension String {
 
 
 fileprivate func isNonTrivialRotation(s1: String, s2: String) -> Bool {
-    submition1(s1: s1, s2: s2)
+    submission1(s1: s1, s2: s2)
 }
 
 
@@ -76,9 +76,9 @@ fileprivate func isNonTrivialRotation(s1: String, s2: String) -> Bool {
 
 /* KMP (Knuth-Morris-Pratt)
  
- Dps que a IA comentou sobre esse algoritmo, peguei a ideia e re-apliquei.
+ Depois que a IA comentou sobre esse algoritmo, peguei a ideia e re-apliquei.
  */
-fileprivate func submition2(s1: String, s2: String) -> Bool {
+fileprivate func submission2(s1: String, s2: String) -> Bool {
     guard s1.count > 1, s2.count > 1, s1.count == s2.count, s1 != s2
     else { return false }
     
@@ -116,7 +116,7 @@ fileprivate func submition2(s1: String, s2: String) -> Bool {
  SUBMITION 01
  ============
  */
-fileprivate func submition1(s1: String, s2: String) -> Bool {
+fileprivate func submission1(s1: String, s2: String) -> Bool {
     guard s1.count > 1, s2.count > 1, s1.count == s2.count, s1 != s2
     else { return false }
     

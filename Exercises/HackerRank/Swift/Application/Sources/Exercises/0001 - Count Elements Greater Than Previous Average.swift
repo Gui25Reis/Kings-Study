@@ -72,9 +72,9 @@ fileprivate func countResponseTimeRegressions(responseTimes: [Int]) -> Int {
         count += 1
         lastSum += number
         
-        let avarage = lastSum / count
-        
-        guard number > avarage else { continue }
+        let average = lastSum / count
+
+        guard number > average else { continue }
         valids += 1
     }
     

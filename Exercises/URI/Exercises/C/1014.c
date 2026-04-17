@@ -1,11 +1,11 @@
-#include <stdio.h>                              // Bilbioteca padrão de entrada e saída
+#include <stdio.h>                              // Biblioteca padrão de entrada e saída
 // #include <stdlib.h>
  
 int main() {                                    // Função main():
     int km;                                         // Declara as variáveis
     float l;
 
-    scanf("%d", &km);                               // Pede ao usuário as enradas
+    scanf("%d", &km);                               // Pede ao usuário as entradas
     scanf("%f", &l);
 
     printf("%.3f km/l\n", (km/l));                  // Mostra o consumo
