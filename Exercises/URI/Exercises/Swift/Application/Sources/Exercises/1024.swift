@@ -51,7 +51,7 @@ fileprivate struct Encryptor {
         return newString
     }
 
-    /* Inverção */
+    /* Inversão */
     private func step02(_ data: String) -> String {
         let newData = data.reversed()
         
@@ -59,7 +59,7 @@ fileprivate struct Encryptor {
         return newString
     }
 
-    /* Segunda metada um caracter pra esquerda */
+    /* Segunda metade um caracter pra esquerda */
     private func step03(_ data: String) -> String {
         let total = data.count
         let half = total / 2
@@ -111,13 +111,13 @@ func ex1024(input: InputProvider = DefaultInputProvider()) {
     let qtd = userInput.int
     
     let qtdWithSpace = qtd - 1
-    let ecnryptor = Encryptor()
-    
+    let encryptor = Encryptor()
+
     var response = ""
     for num in 0..<qtd {
         let userInput = input.readLine()!
-            
-        let encrypted = ecnryptor.encrypt(data: userInput)
+
+        let encrypted = encryptor.encrypt(data: userInput)
         response += encrypted
         
         let isNotLastStep = num != qtdWithSpace

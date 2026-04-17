@@ -37,15 +37,15 @@ fileprivate struct Consumption {
     
     
     mutating func newConsumption(people: Int, meters: Int) {
-        let avarage = meters / people
-        
+        let average = meters / people
+
         totalMeters += meters
-        
-        let hasValue = cpp[avarage] != nil
+
+        let hasValue = cpp[average] != nil
         if hasValue {
-            cpp[avarage]? += people
+            cpp[average]? += people
         } else {
-            cpp[avarage] = people
+            cpp[average] = people
         }
     }
     
@@ -56,8 +56,8 @@ fileprivate struct Consumption {
         let consumptionResult = makeConsumptionList()
         response += "\n" + consumptionResult
         
-        let avarege = getAverageConsumption()
-        response += "\n" + "Consumo medio: \(avarege.precision(of: 2, type: .down)) m3."
+        let average = getAverageConsumption()
+        response += "\n" + "Consumo medio: \(average.precision(of: 2, type: .down)) m3."
         
         return response
     }

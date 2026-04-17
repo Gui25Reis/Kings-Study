@@ -128,7 +128,7 @@ fileprivate extension String {
     }
 }
 
-fileprivate func submittion2(code: String) -> Bool {
+fileprivate func submission2(code: String) -> Bool {
     guard !code.isEmpty else { return false }
     
     var letters = ""
@@ -187,7 +187,7 @@ fileprivate func submittion2(code: String) -> Bool {
  SUBMITION 01
  ============
  */
-fileprivate func submittion1(code: String) -> Bool {
+fileprivate func submission1(code: String) -> Bool {
     /*
      Your submission contains non ASCII characters, we dont accept submissions with non ASCII characters for this challenge.
      */

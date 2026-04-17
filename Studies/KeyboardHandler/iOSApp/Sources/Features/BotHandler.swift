@@ -9,6 +9,6 @@ class BotHandler {
     
     func resolve(question: String?) -> String {
         
-        return "Você eh inteligente, parabéns!"
+        return "Você é inteligente, parabéns!"
     }
 }

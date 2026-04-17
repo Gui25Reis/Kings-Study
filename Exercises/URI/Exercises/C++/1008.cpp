@@ -15,7 +15,7 @@ int main() {                                            // Função MAIN:
 
     cout << fixed << setprecision(2);                   // Formata a saída para duas casas decimais
 
-    cout << "SALARY = U$ "<< valor*hr << endl;          // Mosstra o salário
+    cout << "SALARY = U$ "<< valor*hr << endl;          // Mostra o salário
 
     // system("pause");
 	return 0;

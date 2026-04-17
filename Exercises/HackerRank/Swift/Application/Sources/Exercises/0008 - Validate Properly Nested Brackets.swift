@@ -51,8 +51,8 @@ struct Ex0008 {
 /* Solução otimizada: O(n) */
 fileprivate func areBracketsProperlyMatched(code_snippet: String) -> Bool {
     /*
-     Se existir um valor = é um brascket
-     Se o valor é vazio = brascket que abre
+     Se existir um valor = é um bracket
+     Se o valor é vazio = bracket que abre
      */
     let dict = [
         "{": "",
@@ -66,20 +66,20 @@ fileprivate func areBracketsProperlyMatched(code_snippet: String) -> Bool {
     var stack = [String]()
     
     for char in code_snippet {
-        let brascket = "\(char)"
-        let expected = dict[brascket]
-        
+        let bracket = "\(char)"
+        let expected = dict[bracket]
+
         guard let expected else { continue }
-        
-        let isBrascketOpener = expected.isEmpty
-        
+
+        let isBracketOpener = expected.isEmpty
+
         // Se o primeiro é inválido, já encerra.
-        if stack.isEmpty && !isBrascketOpener {
+        if stack.isEmpty && !isBracketOpener {
             return false
         }
-        
-        if stack.isEmpty || isBrascketOpener {
-            stack.append(brascket)
+
+        if stack.isEmpty || isBracketOpener {
+            stack.append(bracket)
             continue
         }
         
@@ -113,7 +113,7 @@ fileprivate func solution1(code_snippet: String) -> Bool {
     
     var stack = [String]()
     
-    // Separete braskets
+    // Separate brackets
     for char in code_snippet {
         let str = "\(char)"
         let bracket = dict[str]
@@ -131,14 +131,14 @@ fileprivate func solution1(code_snippet: String) -> Bool {
     var ind = 0
     while stack.count > 0 && ind >= 0 {
         
-        let brascket = stack[ind]
-        
-        let expected = dict[brascket]
+        let bracket = stack[ind]
+
+        let expected = dict[bracket]
         guard let expected, !expected.isEmpty else { return false }
+
+        let nextBracket = stack[ind+1]
         
-        let nextBrascket = stack[ind+1]
-        
-        if nextBrascket == expected {
+        if nextBracket == expected {
             stack.remove(at: ind+1)
             stack.remove(at: ind)
             ind -= 1

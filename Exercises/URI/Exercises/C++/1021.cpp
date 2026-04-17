@@ -1,5 +1,5 @@
 #include <iostream>                                     // Biblioteca padrão entrada/saída
-#include <cmath>                                        // Biclioteca usada pra matemática
+#include <cmath>                                        // Biblioteca usada pra matemática
 // #include <string>
 
 using namespace std;
@@ -35,7 +35,7 @@ int main() {                                                                    
 
     int_valor = (int)valor;                                                         // Pega a parte inteira do valor
     
-    moedas(round(((valor-int_valor) + notas(valor)) * 100));                        // Peede as notas e o que sobrar manda pra moedas
+    moedas(round(((valor-int_valor) + notas(valor)) * 100));                        // Pede as notas e o que sobrar manda pra moedas
     
     // system("pause");
 	return 0;

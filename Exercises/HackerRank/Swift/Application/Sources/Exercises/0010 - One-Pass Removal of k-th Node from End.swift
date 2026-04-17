@@ -128,7 +128,7 @@ fileprivate func removeKthNodeFromEnd(head: SinglyLinkedListNode?, k: Int) -> Si
 /*
  Tempo: O(n) | Espaço: O(1)
  
- A solução da IA traz uma abordagem on o espaço acaba sendo O(1).
+ A solução da IA traz uma abordagem onde o espaço acaba sendo O(1).
  Diferente da recursão que sempre vai ter a complexidade de espaço O(n), por conta dos frames que ficam na stack.
  */
 fileprivate func aiSolution(head: SinglyLinkedListNode?, k: Int) -> SinglyLinkedListNode? {

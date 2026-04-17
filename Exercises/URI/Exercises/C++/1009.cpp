@@ -1,6 +1,6 @@
 #include <iostream>                                     // Biblioteca padrão entrada/saída
 #include <iomanip>                                      // Biblioteca para definir o número de casas decimais
-#include <string>                                       // Biblioteca para variável do tipo "string"s
+#include <string>                                       // Biblioteca para variável do tipo "string"
 
 using namespace std;
 

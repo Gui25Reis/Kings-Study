@@ -117,7 +117,7 @@ fileprivate func findMMC(_ figA: Int, _ figB: Int) -> String {
 }
 
 func ex1028(input: InputProvider = DefaultInputProvider()) {
-    input.shouldConsidereNextLineForEachPrint = true
+    input.shouldConsiderNextLineForEachPrint = true
     
     let entriesCount = input.readLine()!
     

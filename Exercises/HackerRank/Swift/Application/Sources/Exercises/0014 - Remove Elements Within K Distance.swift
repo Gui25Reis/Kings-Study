@@ -83,18 +83,18 @@ fileprivate func debounceTimestamps(timestamps: [Int], K: Int) -> Int {
     var j = 1
     var i = 0
     
-    var lenght = 1
-        
+    var length = 1
+
     repeat {
         let diff = timestamps[j] - timestamps[i]
         let isValid = diff >= K
-        
+
         guard isValid else { j+=1; continue }
-        
-        lenght += 1
+
+        length += 1
         i = j
         j+=1
     } while j != timestamps.count
-    
-    return lenght
+
+    return length
 }

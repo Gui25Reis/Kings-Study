@@ -3,7 +3,7 @@
 
 int main() {                                    // Função main():
     int idade, i;                                           // Declara as variáveis
-    int dias[3] = {365, 30, 1};                             // Variávis de divisão
+    int dias[3] = {365, 30, 1};                             // Variáveis de divisão
     const char *txt[3] = {"ano(s)", "mes(es)", "dia(s)"};   // Vetor com as string de saída
 
     scanf("%d", &idade);                                    // Pede a entrada

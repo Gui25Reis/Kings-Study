@@ -1,4 +1,4 @@
-#include <stdio.h>                                      // Bilbioteca padrão de entrada e saída
+#include <stdio.h>                                      // Biblioteca padrão de entrada e saída
 // #include <stdlib.h>
  
 int main() {                                            // Função main():
@@ -6,7 +6,7 @@ int main() {                                            // Função main():
 
     scanf("%lf", &r);                                       // Pede ao usuário
 
-    printf("VOLUME = %.3f\n", (4.0/3) * 3.14159 * (r*r*r)); // Faz o ´calculo
+    printf("VOLUME = %.3f\n", (4.0/3) * 3.14159 * (r*r*r)); // Faz o cálculo
     // system("pause");
     return 0;
 }

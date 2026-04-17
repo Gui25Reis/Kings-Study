@@ -46,7 +46,7 @@ struct Ex0026 {
         guard let qtdInput, let qtd = Int(qtdInput)
         else { return [] }
         
-        // Array lenght
+        // Array length
         _ = input.readLine() /* Ignored input */
         
         // Matrix Creation
@@ -72,7 +72,7 @@ fileprivate func mergeHighDefinitionIntervals(intervals: [[Int]]) -> [[Int]] {
         return intervals
     }
     
-    // Sort all intervals f1rst by start time
+    // Sort all intervals first by start time
     var array = intervals.sorted { $0[0] < $1[0] } // O(n log n)
     
     let first = array.removeFirst()

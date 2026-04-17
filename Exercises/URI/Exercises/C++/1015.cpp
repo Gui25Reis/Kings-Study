@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {                                            // Função MAIN:
-    float x1, x2, y1, y2;                                   // Decalra as variáveis
+    float x1, x2, y1, y2;                                   // Declara as variáveis
 
     cin >> x1 >> y1;                                        // Pede as entradas ao usuário
     cin >> x2 >> y2;

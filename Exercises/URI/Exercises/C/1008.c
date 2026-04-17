@@ -1,4 +1,4 @@
-#include <stdio.h>                              // Bilbioteca padrão de entrada e saída
+#include <stdio.h>                              // Biblioteca padrão de entrada e saída
 #include <string.h>
 // #include <stdlib.h>
  
@@ -11,7 +11,7 @@ int main() {                                    // Função main():
     scanf("%f", &valor);
 
     printf("NUMBER = %d\n", num);                   // Mostra o número
-    printf("SALARY = U$ %.2f\n", hr*valor);         // Mosstra o salário
+    printf("SALARY = U$ %.2f\n", hr*valor);         // Mostra o salário
 
     // system("pause");
     return 0;

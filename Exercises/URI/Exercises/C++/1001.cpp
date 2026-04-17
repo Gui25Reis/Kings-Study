@@ -1,4 +1,4 @@
-#include <iostream>                 // Bilbioteca padrão de entrada e saída
+#include <iostream>                 // Biblioteca padrão de entrada e saída
 
 using namespace std;
  

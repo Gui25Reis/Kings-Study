@@ -110,7 +110,7 @@ fileprivate func countAffordablePairs(prices: [Int], budget: Int) -> Int {
 /*
  Tempo: O(n²) | Espaço: O(1)
  */
-fileprivate func submittion1(prices: [Int], budget: Int) -> Int {
+fileprivate func submission1(prices: [Int], budget: Int) -> Int {
     guard prices.count > 1 else { return 0 }
     
     var i = 0
