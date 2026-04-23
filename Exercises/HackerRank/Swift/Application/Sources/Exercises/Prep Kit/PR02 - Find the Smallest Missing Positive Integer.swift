@@ -84,8 +84,21 @@ struct ExPR02 {
 
 // MARK: - Solutions
 fileprivate func findSmallestMissingPositive(orderNumbers array: [Int]) -> Int {
-    return submission1(orderNumbers: array)
-    
+    submission1(orderNumbers: array)
+}
+
+/*
+ Ao usar o while, mesmo que faça mais interações que o tamanho do array,
+ ainda continua sendo uma solução O(n).
+ 
+ O(n) quer dizer crescimento linear, onde n nesse caso seria a quantidade
+ de interações necessárias para ajustar o array.
+ 
+ Por isso que a solução da IA usa while e funciona, e nessa do draft não funciona
+ pois se limita ao tamanho do vetor. Isso faz com que o vetor não fique completamente
+ ajustado.
+ */
+fileprivate func draftNewSolution(orderNumbers array: [Int]) -> Int {
     guard !array.isEmpty else { return 1 }
     
     if array.count == 1 {
@@ -131,7 +144,6 @@ fileprivate func findSmallestMissingPositive(orderNumbers array: [Int]) -> Int {
     
     return minPositive
 }
-
 
 // MARK: AI solution
 

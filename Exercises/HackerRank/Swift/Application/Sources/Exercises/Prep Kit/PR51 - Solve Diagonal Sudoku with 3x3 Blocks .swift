@@ -349,7 +349,8 @@ fileprivate func aiSolution(grid: [[Int]]) -> [[Int]] {
 
         return true
     }
-
+    
+    @discardableResult
     func solve() -> Bool {
         for row in 0..<9 {
             for col in 0..<9 {
