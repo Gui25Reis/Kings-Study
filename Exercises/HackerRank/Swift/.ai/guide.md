@@ -63,17 +63,17 @@ Quando o usuário não entende um conceito:
 
 ### Exercício
 ```
-Application/Sources/Exercises/000X - Nome do Exercício.swift
+Application/Sources/Exercises/Prep Kit/PR00X - Nome do Exercício.swift
 ```
 
 Cada arquivo contém:
 - Um comentário no topo com a descrição do problema, input format, exemplos e link
-- Uma `struct Ex000X` com o método `solution(input:)` que lida com I/O
+- Uma `struct ExPR00X` com o método `solution(input:)` que lida com I/O
 - Uma função `fileprivate` que contém a lógica de solução do usuário
 
 ### Testes
 ```
-Application/Tests/000XTests.swift
+Application/Tests/Prep Kit/PR00XTests.swift
 ```
 
 ---
@@ -81,7 +81,7 @@ Application/Tests/000XTests.swift
 ## Padrão da struct
 
 ```swift
-struct Ex000X {
+struct ExPR00X {
     func solution(input: InputProvider = DefaultInputProvider()) -> ReturnType {
         // leitura do input via input.readLine()
         // chama a função fileprivate com os dados lidos
@@ -105,12 +105,15 @@ struct Ex000X {
 ```swift
 import XCTest
 
-final class HR000XTests: XCTestCase {
+final class PR00XTests: XCTestCase {
 
-    var inputs: [String]! = .init()
-    lazy var ex = Ex000X()
+    var inputs: [String]!
+    lazy var ex = ExPR00X()
 
-    override func setUp() { super.setUp() }
+    override func setUp() {
+        super.setUp()
+        inputs = []
+    }
 
     override func tearDown() {
         inputs = nil

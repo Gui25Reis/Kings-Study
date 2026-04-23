@@ -2,10 +2,13 @@ import XCTest
 
 final class PR51Tests: XCTestCase {
 
-    var inputs: [String]! = .init()
+    var inputs: [String]!
     lazy var ex = ExPR51()
 
-    override func setUp() { super.setUp() }
+    override func setUp() {
+        super.setUp()
+        inputs = []
+    }
 
     override func tearDown() {
         inputs = nil

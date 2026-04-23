@@ -2,12 +2,13 @@ import XCTest
 
 final class PR01Tests: XCTestCase {
     
-    var inputs: [String]! = .init()
+    var inputs: [String]!
     lazy var ex = ExPR01()
     
     /* Ciclo de Vida */
     override func setUp() {
         super.setUp()
+        inputs = []
     }
     
     override func tearDown() {
